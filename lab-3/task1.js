@@ -7,7 +7,7 @@ class calcError extends Error{
 
 function calc(a, b, operation){
     try{
-        let res;
+        let result;
         switch(operation){
             case '+':
                 result = a + b;
@@ -23,7 +23,6 @@ function calc(a, b, operation){
                 break;
             default:
                 return ('Error: no such operation.');
-                break;
         };
         if (isNaN(result)){
             throw new calcError('Result is not a number.')
